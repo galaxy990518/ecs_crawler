@@ -1,7 +1,7 @@
 const parent = document.querySelector('#CartProducts')
 const cartProducts = parent.querySelectorAll('.tr')
 
-const products = [...cartProducts].map(product => {
+const products = [...cartProducts].map((product) => {
     const name = product.querySelector('.item__product-title').textContent
     const variantTitle = product.querySelector('.item__variant-title').textContent
     const price = +product.querySelector('div.td.price').textContent.replace(/[^\d.]/g, '')
@@ -13,8 +13,8 @@ const products = [...cartProducts].map(product => {
         variantTitle,
         price,
         qty,
-        total
+        total,
     }
 })
 
-console.log(products)
+console.log('Cart products', products)
